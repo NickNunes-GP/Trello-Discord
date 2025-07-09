@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: discord-trello-bot
+    runtime: python3
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: TRELLO_API_KEY
+        sync: false
+      - key: TRELLO_TOKEN
+        sync: false
+      - key: TRELLO_WEBHOOK_SECRET
+        sync: false
+      - key: DISCORD_CHANNEL_ID
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
